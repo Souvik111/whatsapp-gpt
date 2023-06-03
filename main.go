@@ -42,7 +42,7 @@ func (mycli *MyClient) eventHandler(evt interface{}) {
 		// Make a http request to localhost:5001/chat?q= with the message, and send the response
 		// URL encode the message
 		urlEncoded := url.QueryEscape(msg)
-		url := "http://localhost:5001/chat?q=" + urlEncoded
+		url := "http://localhost:5000/qna?query=" + urlEncoded
 		// Make the request
 		resp, err := http.Get(url)
 		if err != nil {
